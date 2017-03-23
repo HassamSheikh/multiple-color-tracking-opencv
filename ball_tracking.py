@@ -55,7 +55,6 @@ while True:
 
 	# construct a mask for the color "green", then perform
 	# a series of dilations and erosions to remove any small
-	# blobs left in the mask
 	mask = cv2.inRange(hsv, greenLower, greenUpper)
 	mask = cv2.erode(mask, None, iterations=2)
 	mask = cv2.dilate(mask, None, iterations=2)
